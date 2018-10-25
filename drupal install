@@ -1,0 +1,29 @@
+1 sudo mkdir /var/www/html/drupal/sites/default/files
+
+2 sudo chmod a+w /var/www/html/drupal/sites/default/files
+
+3 sudo cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/    default/settings.php
+
+4 sudo chmod a+w /var/www/html/drupal/sites/default/settings.php
+
+
+5 for clean urls
+
+
+Enable apache mode rewrite     chalo in 00 vala folder -
+
+sudo a2enmod  command rewrite
+put below code into /etc/apache2/sites-available/000-default.conf
+
+<Directory /var/www/html>
+ Allowoverride All
+</Directory>
+sudo service apache2 restart
+
+This is working for me...﻿
+ 
+
+
+
+
+
